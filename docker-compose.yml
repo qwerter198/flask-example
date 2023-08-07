@@ -9,10 +9,7 @@ services:
     ports:
       - "8081:5000"
     command:
-      - sh
-      - -c
-      - |
-        gunicorn -w 1 -k gevent -t 30 -b :5000 app:app
+      - gunicorn -w 1 -k gevent -t 30 -b 0.0.0.0:5000 app:app
     restart: always
 
 
