@@ -1,0 +1,17 @@
+.git/
+.gitignore
+.idea/
+__pycache__/
+*.db
+venv/
+.env/
+.vscode/
+.pytest_cache/
+.tox/
+*.egg-info/
+.coverage
+.mypy*/
+*.log
+htmlcov/
+# because no recursive
+**/__pycache__
