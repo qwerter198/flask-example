@@ -12,9 +12,7 @@ services:
       - sh
       - -c
       - |
-        gunicorn -c gunicorn.conf.py app:app &
-        python init.py &
-        python scheduler.py
+        gunicorn -c gunicorn.conf.py app:app
     restart: always
 
 
