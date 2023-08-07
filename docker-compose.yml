@@ -12,7 +12,7 @@ services:
       - sh
       - -c
       - |
-        gunicorn -c gunicorn.conf.py app:app
+        gunicorn -w 1 -k gevent -t 30 -b :5000 app:app
     restart: always
 
 
