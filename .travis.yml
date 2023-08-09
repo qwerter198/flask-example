@@ -2,6 +2,9 @@ language: python
 python:
   - '3.9'
 
+env:
+  - INGNAME=flask-example_web
+
 services:
   - docker
 
@@ -10,3 +13,9 @@ install:
 
 script:
   - tox
+
+deploy:
+  provider: script
+  script: .deploy.sh
+  on:
+    branch: main
