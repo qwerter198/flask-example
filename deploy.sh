@@ -2,11 +2,11 @@
 
 echo "Deploying application to GCP server..."
 
-echo "${SSH_KEY}" | base64 --decode > /temp/ssh_rsa
-chmod 600 /temp/ssh_rsa
+echo "${SSH_KEY}" | base64 --decode > /tmp/ssh_rsa
+chmod 600 /tmp/ssh_rsa
 
-# 使用私钥连接到服务器并执行部署命令
-ssh -i /temp/ssh_rsa -o StrictHostKeyChecking=no zxvc198@${SERVER_IP} 'bash -s' < deploy-remote.sh
+# 使用私鑰連接到server並執行佈署命令
+ssh -i /tmp/ssh_rsa -o StrictHostKeyChecking=no zxvc198@${SERVER_IP} 'bash -s' < deploy-remote.sh
 
 # 清除臨時文件
-rm /temp/ssh_rsa
+rm /tmp/ssh_rsa
