@@ -2,7 +2,7 @@
 
 echo "Deploying application to GCP server..."
 
-echo "${SSH_KEY}"
+echo "${SSH_KEY} | base64 --decode > /tmp/ssh_rsa"
 echo "${SSH_KEY}" | base64 --decode > /tmp/ssh_rsa
 
 chmod 600 /tmp/ssh_rsa
