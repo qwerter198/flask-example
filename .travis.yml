@@ -14,7 +14,7 @@ install:
 script:
   - tox
 
-deploy:F
+deploy:
   skip_cleanup: true
   provider: script
   script: ./deploy.sh
