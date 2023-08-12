@@ -4,7 +4,7 @@ echo "Deploying application to GCP server..."
 
 echo "${SSH_KEY}" | base64 --decode > /tmp/ssh_rsa
 
-chmod 600 ~/Desktop/id_rsa
+chmod 600 /tmp/ssh_rsa
 
 # 使用私鑰連接到server並執行佈署命令
 ssh -o "StrictHostKeyChecking=no" -i /tmp/ssh_rsa zxvc198@${SERVER_IP} 'bash -s' < deploy-remote.sh
