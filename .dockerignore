@@ -3,7 +3,7 @@
 .idea/
 __pycache__/
 *.db
-venv/
+.venv/
 .env/
 .vscode/
 .pytest_cache/
@@ -14,4 +14,4 @@ venv/
 *.log
 htmlcov/
 # because no recursive
-**/__pycache__
+**/__pycache__/
