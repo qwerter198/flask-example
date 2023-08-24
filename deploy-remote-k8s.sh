@@ -14,6 +14,9 @@ docker-compose push
 
 sleep 10
 
+gcloud version
+kubectl version
+
 gcloud auth activate-service-account --key-file=/tmp/gcp_key.json
 
 # gcloud container clusters get-credentials $CLUSTER_NAME --zone $CLUSTER_ZONE --project $PROJECT_ID
