@@ -3,7 +3,7 @@ python:
   - '3.9'
 
 env:
-  - IMAGE_NAME=zxcv198/flask-example:1.0.0
+  - IMAGE_NAME=zxcv198/flask-example:1.0.1
 
 services:
   - docker
@@ -14,9 +14,7 @@ install:
 
 script:
   - tox
-
-after_script: 
-  -docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
+  - docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
   - docker-compose build
   - docker-compose push
 
