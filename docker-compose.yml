@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: python-service
-    image: zxcv198/flask-example:1.0.5
+    image: zxcv198/flask-example:1.0.6
     working_dir: /web
     ports:
       - "5000:5000"
