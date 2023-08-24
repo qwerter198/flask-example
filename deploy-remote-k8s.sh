@@ -15,7 +15,9 @@ docker-compose push
 sleep 10
 
 gcloud auth activate-service-account --key-file=/tmp/gcp_key.json
-gcloud container clusters get-credentials $CLUSTER_NAME --zone $CLUSTER_ZONE --project $PROJECT_ID
+
+# gcloud container clusters get-credentials $CLUSTER_NAME --zone $CLUSTER_ZONE --project $PROJECT_ID
+gcloud container clusters get-credentials kuar-cluster --zone us-west1-a --project woven-fountain-394919
 
 kubectl apply -f kubernetes/deployment.yaml
 
