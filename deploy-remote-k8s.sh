@@ -18,11 +18,6 @@ curl https://sdk.cloud.google.com | bash -s -- --disable-prompts > /dev/null
 export PATH=${HOME}/google-cloud-sdk/bin:${PATH}
 
 gcloud auth activate-service-account --key-file=/tmp/gcp_key.json
-echo ${PROJECT_ID}
-gcloud --quiet config set project ${PROJECT_ID}
-gcloud --quiet config set container/cluster ${CLUSTER_NAME}
-gcloud --quiet config set compute/zone ${CLUSTER_ZONE}
-gcloud --quiet container clusters get-credentials ${CLUSTER_NAME}
 
 kubectl apply -f kubernetes/deployment.yaml
 
