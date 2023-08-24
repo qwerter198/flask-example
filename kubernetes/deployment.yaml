@@ -20,15 +20,15 @@ spec:
         app: flask-app
     spec:
       containers:
-      - name: flask-app
-        image: zxcv198/flask-example:1.0.1
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 5000
-        resources:
-          requests:
-            memory: 64Mi
-            cpu: 50m
-          limits:
-            memory: 256Mi
-            cpu: 500m
+        - name: flask-app
+          image: zxcv198/flask-example:1.0.2
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
+          resources:
+            requests:
+              memory: 64Mi
+              cpu: 50m
+            limits:
+              memory: 256Mi
+              cpu: 500m

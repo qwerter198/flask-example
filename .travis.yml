@@ -3,7 +3,7 @@ python:
   - '3.9'
 
 env:
-  - IMAGE_NAME=zxcv198/flask-example:1.0.1
+  - IMAGE_NAME=zxcv198/flask-example:1.0.2
 
 services:
   - docker
