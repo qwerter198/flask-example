@@ -8,7 +8,7 @@ CORS(app, supports_credentials=True, cors_allowed_origins='*')
 
 @app.route('/')
 def index() -> str:
-    return 'Hello, world! v1.0.4'
+    return 'Hello, world! v1.0.5'
 
 
 if __name__ == '__main__':
