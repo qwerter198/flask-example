@@ -15,7 +15,10 @@ docker-compose push
 sleep 10
 
 gcloud version
+
 kubectl version
+
+gcloud components list | grep gke-gcloud-auth-plugin
 
 gcloud auth activate-service-account --key-file=/tmp/gcp_key.json
 
