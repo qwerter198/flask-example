@@ -3,20 +3,26 @@ python:
   - '3.9'
 
 env:
-  - INGNAME=flask-example_web
+  - IMAGE_NAME=zxcv198/flask-example:1.0.0
 
 services:
   - docker
 
 install:
   - pip install tox-travis
+  - pip install docker-compose
 
 script:
   - tox
 
+after_script: 
+  -docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
+  - docker-compose build
+  - docker-compose push
+
 deploy:
   skip_cleanup: true
   provider: script
-  script: chmod +x ./deploy-git.sh && ./deploy-git.sh
+  script: chmod +x ./deploy-k8s.sh && ./deploy-k8s.sh
   on:
     branch: main
