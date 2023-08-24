@@ -12,4 +12,6 @@ docker rmi flask-example_web:1.0.0
 
 docker-compose -f docker-compose.yml up -d
 
+docker-compose push
+
 echo "Application deployed successfully!"

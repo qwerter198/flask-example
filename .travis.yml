@@ -10,15 +10,9 @@ services:
 
 install:
   - pip install tox-travis
-  - pip install docker-compose
 
 script:
   - tox
-
-after_success:
-  - docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
-  - docker-compose build
-  - docker-compose push
 
 deploy:
   skip_cleanup: true
