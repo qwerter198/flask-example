@@ -18,6 +18,6 @@ kubectl apply -f kubernetes/deployment.yaml
 
 kubectl apply -f kubernetes/service.yaml
 
-docker rmi zxcv198/flask-example:1.0.2
+docker rmi zxcv198/flask-example:1.0.3
 
 echo "Application deployed successfully!"
